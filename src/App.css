@@ -2,4 +2,53 @@
   text-align: center;
   display: flex;
   flex-direction: row;
+  background-color: #F1F2F4;
+}
+
+.main-content {
+  margin: 1rem 5rem 1rem 5rem;
+  width: 100rem;
+  height: auto;
+}
+
+.title-card {
+  background-color: white;
+  height: 15%;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.content-100w-card {
+  background-color: white;
+  height: 45%;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: inset;
+  margin-top: 1rem;
+}
+
+.content-60w-card {
+  background-color: white;
+  width: 59%;
+  border-radius: 15px;
+  box-shadow: inset;
+  margin-top: 1rem;
+}
+
+.content-40w-card {
+  background-color: white;
+  width: 39%;
+  border-radius: 15px;
+  box-shadow: inset;
+  margin-top: 1rem;
+}
+
+.content-small-height {
+  height: 35%;
+}
+
+.horizontal {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 }
