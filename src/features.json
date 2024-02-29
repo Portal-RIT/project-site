@@ -1,12 +1,14 @@
-{
-    "name": "Test Feature",
-    "start": "02-02-2024",
-    "end": "02-16-2024",
-    "Description": "Lorem Ipsum",
-    "associated-sprints": ["Sprint 1, Sprint 2"],
-    "task-list": "? about bottom of overview section of Feature (F1, F2, F3)",
-    "demo": "Would put an Image path here",
-    "task-completion": "Image Path",
-    "time-tracking": "Image Path"
+[
+    {
+        "name": "Test Feature",
+        "start": "02-02-2024",
+        "end": "02-16-2024",
+        "description": "Lorem Ipsum",
+        "associated-sprints": ["Sprint 1, Sprint 2"],
+        "task-list": "? about bottom of overview section of Feature (F1, F2, F3)",
+        "demo": "Would put an Image path here",
+        "task-completion": "Image Path",
+        "time-tracking": "Image Path"
 
-}
+    }
+]
