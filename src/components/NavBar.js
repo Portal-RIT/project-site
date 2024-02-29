@@ -20,32 +20,34 @@ function NavBar ({features, sprints}) {
 			style={{height: "100%"}}
 			>
 			<Menu>
-				
-			<MenuItem
-				icon={ <BsFillHouseFill></BsFillHouseFill> }
-			> Home </MenuItem>
-			<MenuItem
-				icon={ <HiUserGroup></HiUserGroup> }
-			> Team </MenuItem>
-			<SubMenu 
-				label="Features" 
-				icon= {<FaTasks></FaTasks>}
-				>
-				{
-				features.map( feature => {
-					return <MenuItem> {feature.name} </MenuItem>
-				})
-				}
-			</SubMenu>
-			<SubMenu 
-				label="Sprints"
-				icon={<LuIterationCcw></LuIterationCcw>}>
-				{
-				sprints.map( sprint => {
-					return <MenuItem> {sprint.name} </MenuItem>
-				})
-				}
-			</SubMenu>
+				<MenuItem
+					icon={ <BsFillHouseFill></BsFillHouseFill> }
+				> Home </MenuItem>
+
+				<MenuItem
+					icon={ <HiUserGroup></HiUserGroup> }
+				> Team </MenuItem>
+
+				<SubMenu 
+					label="Features" 
+					icon= {<FaTasks></FaTasks>}
+					>
+					{
+					features.map( feature => {
+						return <MenuItem> {feature.name} </MenuItem>
+					})
+					}
+				</SubMenu>
+
+				<SubMenu 
+					label="Sprints"
+					icon={<LuIterationCcw></LuIterationCcw>}>
+					{
+					sprints.map( sprint => {
+						return <MenuItem> {sprint.name} </MenuItem>
+					})
+					}
+				</SubMenu>
 			</Menu>
 		</Sidebar>
 	)
