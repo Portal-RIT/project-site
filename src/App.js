@@ -43,6 +43,12 @@ function App() {
   return (
     <div className="App" style={{height: "100%"}}>
       <BrowserRouter>
+        
+        <NavBar
+          features={features}
+          sprints={sprints}
+        ></NavBar>
+
         <Routes>
           <Route path={BASE_LOCATION} element={ <Home/> }/>
           <Route path={BASE_LOCATION + "/team"} element={ <Team/> }/>
@@ -51,10 +57,6 @@ function App() {
           <Route path={BASE_LOCATION + "/feature"} element={ <Feature/> }/>
           <Route path={BASE_LOCATION + "/sprint"} element={ <Sprint/> } />
         </Routes>
-        <NavBar
-          features={features}
-          sprints={sprints}
-        ></NavBar>
 
       </BrowserRouter>
       
