@@ -1,23 +1,38 @@
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
+import NavBar from './components/NavBar';
+import Home from './pages/Home';
+import Team from './pages/Team';
+import Features from './pages/Features';
+import Sprints from './pages/Sprints';
+import Feature from './pages/Feature';
+import Sprint from './pages/Sprint';
+import { BASE_LOCATION } from './routes';
+import { sprints } from './objects/sprints';
+import { features } from './objects/features';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{height: "100%"}}>
+      <BrowserRouter>
+        
+        <NavBar
+          features={features}
+          sprints={sprints}
+        ></NavBar>
+
+        <Routes>
+          <Route path={BASE_LOCATION} element={ <Home/> }/>
+          <Route path={BASE_LOCATION + "/team"} element={ <Team/> }/>
+          <Route path={BASE_LOCATION + "/features"} element={ <Features/> }/>
+          <Route path={BASE_LOCATION + "/sprints"} element={ <Sprints/> } />
+          <Route path={BASE_LOCATION + "/feature"} element={ <Feature/> }/>
+          <Route path={BASE_LOCATION + "/sprint"} element={ <Sprint/> } />
+        </Routes>
+
+      </BrowserRouter>
+      
     </div>
   );
 }
