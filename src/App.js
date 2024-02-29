@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Team from './pages/Team';
 import Features from './pages/Features';
 import Sprints from './pages/Sprints';
+import { BASE_LOCATION } from './routes';
 
 // Zoe's note: Make sure that each feature object always has a name in order for the navbar to work
 const features = [
@@ -33,8 +34,6 @@ const sprints = [
 	  end: "01-14-2024"
 	}
 ]
-
-const BASE_LOCATION = "/project-site";
 
 function App() {
   return (

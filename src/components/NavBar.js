@@ -9,7 +9,9 @@ import { BsFillHouseFill } from "react-icons/bs";
 import { HiUserGroup } from "react-icons/hi2";
 import { FaTasks } from "react-icons/fa";
 import { LuIterationCcw } from "react-icons/lu";
-  
+import { Link } from 'react-router-dom';
+import { FEATURES, HOME, SPRINTS, TEAM } from '../routes';
+
 function NavBar ({features, sprints}) {
 	const [collapsed, setCollapsed] = useState(true);
 	return (
@@ -22,16 +24,19 @@ function NavBar ({features, sprints}) {
 			<Menu>
 				<MenuItem
 					icon={ <BsFillHouseFill></BsFillHouseFill> }
+					component={<Link to={HOME} />}
 				> Home </MenuItem>
 
 				<MenuItem
 					icon={ <HiUserGroup></HiUserGroup> }
+					component={ <Link to={TEAM} /> }
 				> Team </MenuItem>
 
 				<SubMenu 
 					label="Features" 
 					icon= {<FaTasks></FaTasks>}
-					>
+					component={ <Link to={FEATURES} /> }
+				>
 					{
 					features.map( feature => {
 						return <MenuItem> {feature.name} </MenuItem>
@@ -41,7 +46,9 @@ function NavBar ({features, sprints}) {
 
 				<SubMenu 
 					label="Sprints"
-					icon={<LuIterationCcw></LuIterationCcw>}>
+					icon={<LuIterationCcw></LuIterationCcw>}
+					component={<Link to={SPRINTS} /> }
+				>
 					{
 					sprints.map( sprint => {
 						return <MenuItem> {sprint.name} </MenuItem>
