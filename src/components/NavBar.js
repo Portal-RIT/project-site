@@ -14,11 +14,14 @@ import { FEATURES, HOME, SPRINTS, TEAM, SPRINT, FEATURE } from '../routes';
 
 function NavBar ({features, sprints}) {
 	const [collapsed, setCollapsed] = useState(true);
+	const [stickyOpen, setStickyOpen] = useState(false);
+
 	return (
 		<Sidebar 
-			collapsed={collapsed}
+			collapsed={stickyOpen && collapsed}
 			onMouseEnter={() => setCollapsed(false)}
 			onMouseLeave={() => setCollapsed(true)}
+			onClick={() => setStickyOpen(!stickyOpen)}
 			style={{height: "100%"}}
 			>
 			<Menu>
