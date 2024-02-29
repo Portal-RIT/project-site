@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import Team from './pages/Team';
 import Features from './pages/Features';
 import Sprints from './pages/Sprints';
+import Feature from './pages/Feature';
+import Sprint from './pages/Sprint';
 import { BASE_LOCATION } from './routes';
 
 // Zoe's note: Make sure that each feature object always has a name in order for the navbar to work
@@ -35,7 +37,9 @@ const sprints = [
 	}
 ]
 
+
 function App() {
+
   return (
     <div className="App" style={{height: "100%"}}>
       <BrowserRouter>
@@ -44,6 +48,8 @@ function App() {
           <Route path={BASE_LOCATION + "/team"} element={ <Team/> }/>
           <Route path={BASE_LOCATION + "/features"} element={ <Features/> }/>
           <Route path={BASE_LOCATION + "/sprints"} element={ <Sprints/> } />
+          <Route path={BASE_LOCATION + "/feature"} element={ <Feature/> }/>
+          <Route path={BASE_LOCATION + "/sprint"} element={ <Sprint/> } />
         </Routes>
         <NavBar
           features={features}

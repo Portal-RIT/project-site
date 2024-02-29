@@ -10,7 +10,7 @@ import { HiUserGroup } from "react-icons/hi2";
 import { FaTasks } from "react-icons/fa";
 import { LuIterationCcw } from "react-icons/lu";
 import { Link } from 'react-router-dom';
-import { FEATURES, HOME, SPRINTS, TEAM } from '../routes';
+import { FEATURES, HOME, SPRINTS, TEAM, SPRINT, FEATURE } from '../routes';
 
 function NavBar ({features, sprints}) {
 	const [collapsed, setCollapsed] = useState(true);
@@ -39,7 +39,18 @@ function NavBar ({features, sprints}) {
 				>
 					{
 					features.map( feature => {
-						return <MenuItem> {feature.name} </MenuItem>
+						return (
+							<MenuItem
+								component={
+									<Link 
+										to={ FEATURE } 
+										state={{ feature: feature}} 
+									/> 
+								}
+							> 
+								{feature.name} 
+							</MenuItem>
+						);
 					})
 					}
 				</SubMenu>
@@ -50,9 +61,20 @@ function NavBar ({features, sprints}) {
 					component={<Link to={SPRINTS} /> }
 				>
 					{
-					sprints.map( sprint => {
-						return <MenuItem> {sprint.name} </MenuItem>
-					})
+						sprints.map( sprint => {
+							return (
+								<MenuItem
+									component={
+										<Link 
+											to={SPRINT} 
+											state={{ sprint: sprint }} 
+										/> 
+									}
+								> 
+									{sprint.name} 
+								</MenuItem>
+							);
+						})
 					}
 				</SubMenu>
 			</Menu>
