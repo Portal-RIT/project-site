@@ -4,16 +4,19 @@ export const features = [
 	{
 	  name: "Feature 1",
 	  start: "01-01-2024",
-	  end: "01-14-2024"
+	  end: "01-14-2024",
+	  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo "
 	},
 	{
 	  name: "Feature 2",
 	  start: "01-14-2024",
-	  end: "01-28-2024"
+	  end: "01-28-2024",
+	  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo "
 	},
 	{
 	  name: "Feature 3",
 	  start: "01-28-2024",
-	  end: "02-11-2024"
+	  end: "02-11-2024",
+	  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo "
 	},
 ]
