@@ -61,7 +61,12 @@ function NavBar ({features, sprints}) {
 				<SubMenu 
 					label="Sprints"
 					icon={<LuIterationCcw></LuIterationCcw>}
-					component={<Link to={SPRINTS} /> }
+					component={
+						<Link 
+							to={SPRINTS} 
+							state={{ sprints: sprints }} 
+						/> 
+					}
 				>
 					{
 						sprints.map( sprint => {

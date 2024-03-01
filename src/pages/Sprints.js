@@ -2,25 +2,35 @@
 import * as React from 'react';
 import '../App.css';
 import TitleCard from '../components/TitleCard';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 function Sprints() {
+	const location = useLocation()
+	const { sprints } = location.state;
+
+	let navigate = useNavigate();
+
+	const routeToSprint = (event) => {
+		navigate('../project-site/sprint/' + event.name, {state: {sprint: event}})
+	}
+
 	return (
 		<div className='main-content'>
-			<TitleCard title="Sprint Progress"></TitleCard>
+			<TitleCard title="Sprint Index"></TitleCard>
 			
-			<div className='content-100w-card' style={{"margin-bottom": "0px"}}>
+			<div className='sprints-index'>
+				{
+					sprints.map(sprint => {
+						console.log(sprint)
+						return (
+							<div className='block' onClick={() => routeToSprint(sprint)}>
+								<h1>{sprint.name}</h1>
+								<p>{sprint.description}</p>
+							</div>
+						)
+					})
+				}
 			</div>
-
-			<div className='horizontal content-small-height'>
-				<div className='content-60w-card' style={{"margin-right": "1%"}}>
-					
-				</div>
-
-				<div className='content-40w-card' style={{"margin-left": "1%"}}>
-
-				</div>
-			</div>
-			
 		</div>
 	)
 }

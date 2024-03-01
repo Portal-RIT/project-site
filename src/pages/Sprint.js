@@ -1,5 +1,8 @@
 
 import { useLocation } from "react-router-dom";
+import '../App.css';
+import TitleCard from "../components/TitleCard";
+
 
 function Sprint() {
 
@@ -7,8 +10,8 @@ function Sprint() {
 	const { sprint } = location.state;
 
 	return (
-		<div>
-			{sprint.name}
+		<div className="main-content">
+			<TitleCard title={sprint.name}></TitleCard>
 		</div>
 	)
 }
