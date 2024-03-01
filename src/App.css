@@ -49,3 +49,22 @@
   height: 35rem;
   border-radius: 32px;
 }
+
+.feature-contents {
+  float: left;
+  display: block;
+  padding-left: 50px;
+}
+
+.grid-tasklist {
+  display: grid;
+  
+}
+
+.sprint-list {
+  float: right;
+  display: inline;
+  margin: 50px;
+  padding: 10px;
+  font-size: medium;
+}

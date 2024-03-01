@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+import FeatureOverview from "../components/FeatureOverview.js"
 
 
 
@@ -27,7 +28,9 @@ function Feature() {
 					<h1>Demo</h1>
 				</div>
 
-				<div className="feature_info_block"></div>
+				<div className="feature_info_block">
+					<FeatureOverview name="Feature 2"/>
+				</div>
 			</div>
 		</div>
 	)
