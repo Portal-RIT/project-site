@@ -16,3 +16,36 @@
 .block:hover{
   background-color: lightblue;
 }
+
+.feature_title_block {
+  background-color: grey;
+  width: 60rem;
+  height: 10rem;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+}
+
+
+.feature_options_block {
+  background-color: grey;
+  width: 60rem;
+  height: 5rem;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.feature_info_block {
+  background-color: grey;
+  width: 60rem;
+  height: 35rem;
+  border-radius: 32px;
+}
