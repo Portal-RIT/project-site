@@ -13,7 +13,11 @@ function grabFeature(featureName){
 
 function FeatureOverview(props) {
 
-    feature = grabFeature(props.name)
+    const feature = grabFeature(props.name)
+
+    const associatedSprints = feature.associated_sprints.map(sprint => 
+            <option value={sprint}>{sprint}</option>
+        );
 
     if(!(feature)) {
         return (
@@ -28,6 +32,12 @@ function FeatureOverview(props) {
             <h1>Description</h1>
             <br/>
             <p>feature.description</p>
+            <br/>
+            <select>{associatedSprints}</select>
+            <br/>
+            <div>
+                <p>put f1, f2, and f3 in grid here</p>
+            </div>
         </div>
     );
 }
