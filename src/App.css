@@ -20,7 +20,7 @@
 .feature_title_block {
   background-color: grey;
   width: 60rem;
-  height: 10rem;
+  height: 20vh;
   border-radius: 32px;
   display: flex;
   flex-direction: row;
@@ -34,7 +34,7 @@
 .feature_options_block {
   background-color: grey;
   width: 60rem;
-  height: 5rem;
+  height: 10vh;
   border-radius: 32px;
   display: flex;
   flex-direction: row;
@@ -46,7 +46,7 @@
 .feature_info_block {
   background-color: grey;
   width: 60rem;
-  height: 35rem;
+  height: 55vh;
   border-radius: 32px;
 }
 

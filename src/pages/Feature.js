@@ -1,11 +1,17 @@
 import { useLocation } from "react-router-dom";
 import FeatureOverview from "../components/FeatureOverview.js"
+import { useState } from "react";
 
 
 
 function Feature() {
+	const [selected, setSelected] = useState("Overview")
 	const location = useLocation();
 	const { feature } = location.state;
+
+	const changeSelected = (e) => {
+		setSelected(e)
+	}
 
 	return (
 		<div style={{display: 'flex', flexDirection: 'row', width: '100%', alignItems: 'center', justifyContent: 'center'}}>
@@ -23,13 +29,19 @@ function Feature() {
 				</div>
 
 				<div className="feature_options_block">
-					<h1>Overview</h1>
-					<h1>Tracking</h1>
-					<h1>Demo</h1>
+					<h1 onClick={() => changeSelected("Overview")}>Overview</h1>
+					<h1 onClick={() => changeSelected("Tracking")}>Tracking</h1>
+					<h1 onClick={() => changeSelected("Demo")}>Demo</h1>
 				</div>
 
 				<div className="feature_info_block">
-					<FeatureOverview name="Feature 2"/>
+					{
+						selected === "Overview" ? 
+						<div>Overview</div> 
+						: selected === "Tracking" ? 
+						<div>Tracking</div> : 
+						<div>Demo</div>
+					}
 				</div>
 			</div>
 		</div>
