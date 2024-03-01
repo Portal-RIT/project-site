@@ -28,9 +28,9 @@ function Feature() {
 				</div>
 
 				<div className="feature_options_block">
-					<h1 onClick={() => changeSelected("Overview")}>Overview</h1>
-					<h1 onClick={() => changeSelected("Tracking")}>Tracking</h1>
-					<h1 onClick={() => changeSelected("Demo")}>Demo</h1>
+					<h1 onClick={() => changeSelected("Overview")} style={{backgroundColor: selected === "Overview" ? '#007DD3' : ''}}>Overview</h1>
+					<h1 onClick={() => changeSelected("Tracking")} style={{backgroundColor: selected === "Tracking" ? '#007DD3' : ''}}>Tracking</h1>
+					<h1 onClick={() => changeSelected("Demo")} style={{backgroundColor: selected === "Demo" ? '#007DD3' : ''}}>Demo</h1>
 				</div>
 
 				<div className="feature_info_block">
