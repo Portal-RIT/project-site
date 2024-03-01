@@ -27,7 +27,7 @@ function App() {
           <Route path={BASE_LOCATION + "/team"} element={ <Team/> }/>
           <Route path={BASE_LOCATION + "/features"} element={ <Features/> }/>
           <Route path={BASE_LOCATION + "/sprints"} element={ <Sprints/> } />
-          <Route path={BASE_LOCATION + "/feature"} element={ <Feature/> }/>
+          <Route path={BASE_LOCATION + "/feature/:featureName"} element={ <Feature/> }/>
           <Route path={BASE_LOCATION + "/sprint"} element={ <Sprint/> } />
         </Routes>
 

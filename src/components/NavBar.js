@@ -43,7 +43,7 @@ function NavBar ({features, sprints}) {
 							<MenuItem
 								component={
 									<Link 
-										to={ FEATURE } 
+										to={ FEATURE + "/" + feature.name} 
 										state={{ feature: feature}} 
 									/> 
 								}
