@@ -1,6 +1,7 @@
 import { sprints } from '../objects/sprints';
 import { features } from '../objects/features';
 import "../App.css"
+import React from 'react';
 
 function grabFeature(featureName){
     for(var i = 0; i < features.length; i++) {
@@ -19,6 +20,9 @@ function FeatureOverview(props) {
     const associatedSprints = feature.associated_sprints.map(sprint => 
             <option value={sprint}>{sprint}</option>
         );
+    
+    // const taskList = 
+    // );
 
     if(!(feature)) {
         return (
@@ -29,18 +33,39 @@ function FeatureOverview(props) {
     }
 
     return(
-        <div>
-            <h1 class="feature-contents">Description</h1>
+        <div class="flex-container">
+            <div>
+                <h1 class="feature-contents">Description</h1>
 
-            <select class="sprint-list">{associatedSprints}</select>
-
-            <p class="feature-contents">{feature.description}</p>
-
-            <h1 class="feature-contents">Task Checklist</h1>
-
-            <div class="grid-tasklist">
-                <p>put f1, f2, and f3 in grid here</p>
+                <select class="sprint-list">
+                    <option hidden>Associated Sprints</option>
+                    {associatedSprints}
+                </select>
             </div>
+
+            <div>
+                <p class="feature-contents">{feature.description}</p>
+            </div>
+            
+            <div>
+                <h1 class="feature-contents">Task Checklist</h1>
+            </div>
+
+            <div>
+            <ul class="flex-tasklist">
+                {feature.tasks.map((task, outerIndex) =>
+                    <li>
+                        {task.map((item, innerIndex) =>
+                            <React.Fragment>
+                                {innerIndex === 0 ? (<h3>{item}</h3>) : (<label><input type="checkbox"/>{item}</label>)}
+                            </React.Fragment>
+                        )}
+                    </li>
+                )}
+            </ul>
+            </div>
+            
+
         </div>
     );
 }

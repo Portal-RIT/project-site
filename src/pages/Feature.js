@@ -37,7 +37,7 @@ function Feature() {
 				<div className="feature_info_block">
 					{
 						selected === "Overview" ? 
-						<div>Overview</div> 
+						<FeatureOverview name={feature.name}/> 
 						: selected === "Tracking" ? 
 						<div>Tracking</div> : 
 						<div>Demo</div>

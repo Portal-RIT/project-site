@@ -54,17 +54,27 @@
   float: left;
   display: block;
   padding-left: 50px;
+  padding-right: 50px;
 }
 
-.grid-tasklist {
-  display: grid;
-  
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-tasklist {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
 }
 
 .sprint-list {
   float: right;
   display: inline;
-  margin: 50px;
+  margin-top: 30px;
+  margin-right: 50px;
   padding: 10px;
   font-size: medium;
+  max-width: 190px;
+  max-height: 150px;
 }
