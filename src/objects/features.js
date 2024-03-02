@@ -23,6 +23,6 @@ export const features = [
 	  end: "02-11-2024",
 	  description: "This is Feature 3",
 	  associated_sprints: ["Sprint 2"],
-	  tasks: [["Name of Task", "Uno", "Dos", "Tres"], ["Next Name", "Cuatro", "cinque"], ["Last Task", "Sice", "Seven", "cater", "Jack"]]
+	  tasks: [["Name of Task", "Uno", "Dos", "Tres", "four", "five"], ["Next Name", "Cuatro", "cinque"], ["Last Task", "Sice", "Seven", "cater"]]
 	},
 ]

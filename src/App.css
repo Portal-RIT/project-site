@@ -66,6 +66,7 @@
   display: flex;
   justify-content: space-around;
   list-style-type: none;
+  height: 100px;
 }
 
 .sprint-list {
@@ -77,4 +78,9 @@
   font-size: medium;
   max-width: 190px;
   max-height: 150px;
+}
+
+.check-label {
+  margin-left: 5px;
+  margin-right: 5px;
 }

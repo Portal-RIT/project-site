@@ -21,8 +21,6 @@ function FeatureOverview(props) {
             <option value={sprint}>{sprint}</option>
         );
     
-    // const taskList = 
-    // );
 
     if(!(feature)) {
         return (
@@ -54,10 +52,12 @@ function FeatureOverview(props) {
             <div>
             <ul class="flex-tasklist">
                 {feature.tasks.map((task, outerIndex) =>
-                    <li>
+                    <li class="check-label">
                         {task.map((item, innerIndex) =>
                             <React.Fragment>
-                                {innerIndex === 0 ? (<h3>{item}</h3>) : (<label><input type="checkbox"/>{item}</label>)}
+                                {innerIndex === 0 ? (<h3>{item}</h3>) : 
+                                    (item.startsWith("+") ? <label class="check-label"> <input checked type="checkbox"/>{item.slice(1)} </label> 
+                                    : <label class="check-label"><input type="checkbox"/>{item}</label>)}
                             </React.Fragment>
                         )}
                     </li>
