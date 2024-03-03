@@ -21,9 +21,11 @@ function FeatureTracking(props) {
 
     const testString = "../img/Test_Chart.png"
 
+    const testImage = require(testString)
+
     return (
         <div>
-            <img class="track-img" src={test} alt={"Completion Tracking for " + feature.name} height="300px" width="300px"/>
+            <img class="track-img" src={test} alt={"Completion Tracking for " + feature.name}/>
             <img class="track-img" src={time} alt={"Time Tracking for " + feature.name}  />
         </div>
     );
