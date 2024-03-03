@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import FeatureOverview from "../components/FeatureOverview.js"
+import FeatureTracking from "../components/FeatureTracking.js"
 import { useState } from "react";
 
 
@@ -39,7 +40,7 @@ function Feature() {
 						selected === "Overview" ? 
 						<FeatureOverview name={feature.name}/> 
 						: selected === "Tracking" ? 
-						<div>Tracking</div> : 
+						<FeatureTracking name={feature.name}/> : 
 						<div>Demo</div>
 					}
 				</div>
