@@ -74,7 +74,7 @@ function NavBar ({features, sprints}) {
 								<MenuItem
 									component={
 										<Link 
-											to={SPRINT} 
+											to={ `${SPRINT}/${sprint.name}`} 
 											state={{ sprint: sprint }} 
 										/> 
 									}

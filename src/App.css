@@ -30,6 +30,7 @@
 .content-60w-card {
   background-color: white;
   width: 59%;
+  height: 40%;
   border-radius: 15px;
   box-shadow: inset;
   margin-top: 1rem;
@@ -38,6 +39,14 @@
 .content-40w-card {
   background-color: white;
   width: 39%;
+  border-radius: 15px;
+  box-shadow: inset;
+  margin-top: 1rem;
+}
+
+.content-50w-card {
+  background-color: white;
+  width: 49%;
   border-radius: 15px;
   box-shadow: inset;
   margin-top: 1rem;
