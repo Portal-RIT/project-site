@@ -2,8 +2,6 @@ import { sprints } from '../objects/sprints';
 import { features } from '../objects/features';
 import "../App.css"
 import React from 'react';
-import test from '../img/Test_Chart.png'
-import time from '../img/Test_Time.png'
 
 function grabFeature(featureName){
     for(var i = 0; i < features.length; i++) {
@@ -18,15 +16,14 @@ function grabFeature(featureName){
 function FeatureTracking(props) {
 
     const feature = grabFeature(props.name)
+    const chart = feature.tracking[0]
+    const report = feature.tracking[1]
 
-    const testString = "../img/Test_Chart.png"
-
-    const testImage = require(testString)
 
     return (
         <div>
-            <img class="track-img" src={test} alt={"Completion Tracking for " + feature.name}/>
-            <img class="track-img" src={time} alt={"Time Tracking for " + feature.name}  />
+            <img class="track-img" src={`../img/${chart}`} alt={"Completion Tracking for " + feature.name}/>
+            <img class="track-img" src={`../img/${report}`} alt={"Time Tracking for " + feature.name}  />
         </div>
     );
 }

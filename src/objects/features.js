@@ -8,7 +8,7 @@ export const features = [
 	  description: "This is Feature 1",
 	  associated_sprints: ["Sprint 1"],
 	  tasks: [["Name of Task", "Uno", "Dos", "Tres"], ["Next Name", "Cuatro", "cinque"], ["Last Task", "Sice", "Seven", "cater", "Jack"]],
-	  tracking: ["Test_Chart", "Test_Time"]
+	  tracking: ["Test_Chart.png", "Test_Time.png"]
 	},
 	{
 	  name: "Feature 2",
