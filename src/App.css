@@ -87,6 +87,14 @@
   justify-content: center;
 }
 
+.innerContent {
+  margin: 10%;
+  text-align: left;
+}
+
+.indented {
+  margin-left: 2rem
+}
 
 .feature_options_block {
   background-color: grey;

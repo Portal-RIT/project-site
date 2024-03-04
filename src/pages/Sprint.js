@@ -16,16 +16,44 @@ function Sprint() {
 			<TitleCard title={sprint.name}></TitleCard>
 			<div className="horizontal" style={{height: "80%"}}>
 				<div className="content-50w-card" style={{marginRight: "1%"}}>
-					<h2>Tasks</h2>
-					<p>
-						{sprint.tasks}
-					</p>
+					<div className="innerContent">
+						<h2>Tasks</h2>
+						<p>
+							{sprint.tasksDescription}
+						</p>
+
+						<li className="indented">
+							{
+								sprint.tasks.map(task => {
+									return (
+										<ul style={{paddingLeft: "1%"}}> {task} </ul>
+									)
+								})
+							}
+							
+						</li>
+					</div>
 				</div>
+
 				<div className="content-50w-card" style={{marginLeft: "1%"}}>
+					<div className="innerContent">
 					<h2>Updates</h2>
 					<p>
-						{sprint.updates}
+						{sprint.updatesDescription}
 					</p>
+
+					<li className="indented">
+						{
+							sprint.updates.map(update => {
+								return (
+									<ul style={{paddingLeft: "1%"}}> {update} </ul>
+								)
+							})
+						}
+					</li>
+
+					</div>
+					
 				</div>
 			</div>
 			
