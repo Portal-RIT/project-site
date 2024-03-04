@@ -13,7 +13,7 @@ function Sprint() {
 
 	return (
 		<div className="main-content">
-			<TitleCard title={sprint.name}></TitleCard>
+			<TitleCard title={sprint.name} subtitle={`${sprint.start}    -    ${sprint.end}`}></TitleCard>
 			<div className="horizontal" style={{height: "80%"}}>
 				<div className="content-50w-card" style={{marginRight: "1%"}}>
 					<div className="innerContent">
@@ -22,16 +22,16 @@ function Sprint() {
 							{sprint.tasksDescription}
 						</p>
 
-						<li className="indented">
+						<ul>
 							{
 								sprint.tasks.map(task => {
 									return (
-										<ul style={{paddingLeft: "1%"}}> {task} </ul>
+										<li> {task} </li>
 									)
 								})
 							}
 							
-						</li>
+						</ul>
 					</div>
 				</div>
 
@@ -42,15 +42,15 @@ function Sprint() {
 						{sprint.updatesDescription}
 					</p>
 
-					<li className="indented">
+					<ul>
 						{
 							sprint.updates.map(update => {
 								return (
-									<ul style={{paddingLeft: "1%"}}> {update} </ul>
+									<li> {update} </li>
 								)
 							})
 						}
-					</li>
+					</ul>
 
 					</div>
 					
