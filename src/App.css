@@ -93,7 +93,7 @@
 }
 
 .home_title_block{
-  background-color: lightgray;
+  background-color: white;
   width: 60rem;
   height: 20vh;
   border-radius: 32px;
@@ -105,7 +105,7 @@
 }
 
 .home_text_block{
-  background-color: lightgray;
+  background-color: white;
   width: 60rem;
   border-radius: 32px;
   gap: 2rem;
