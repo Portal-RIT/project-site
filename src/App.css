@@ -91,3 +91,32 @@
   height: 350px; 
   width:400px;
 }
+
+.home_title_block{
+  background-color: white;
+  width: 60rem;
+  height: 20vh;
+  border-radius: 32px;
+  gap: 2rem;
+  display: block;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+}
+
+.home_text_block{
+  background-color: white;
+  width: 60rem;
+  border-radius: 32px;
+  gap: 2rem;
+  display: block;
+  position: relative;
+  text-align: left;
+  justify-content: center;
+}
+
+p.home_text{
+  padding: 5%;
+  padding-top: 0%;
+  padding-bottom: 2%;
+}
