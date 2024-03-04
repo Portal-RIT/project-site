@@ -49,3 +49,32 @@
   height: 55vh;
   border-radius: 32px;
 }
+
+.home_title_block{
+  background-color: lightgray;
+  width: 60rem;
+  height: 20vh;
+  border-radius: 32px;
+  gap: 2rem;
+  display: block;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+}
+
+.home_text_block{
+  background-color: lightgray;
+  width: 60rem;
+  border-radius: 32px;
+  gap: 2rem;
+  display: block;
+  position: relative;
+  text-align: left;
+  justify-content: center;
+}
+
+p.home_text{
+  padding: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
