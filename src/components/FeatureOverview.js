@@ -1,7 +1,9 @@
 import { sprints } from '../objects/sprints';
 import { features } from '../objects/features';
 import "../App.css"
-import React from 'react';
+import { FEATURES, HOME, SPRINTS, TEAM, SPRINT, FEATURE } from '../routes';
+import { Link, useNavigate } from 'react-router-dom';
+import React, { useState, useHistory } from 'react';
 
 
 function grabFeature(featureName){
@@ -14,12 +16,36 @@ function grabFeature(featureName){
     return false;
 }
 
+function grabSprint(sprintName) {
+    for(var i = 0; i < sprints.length; i++) {
+        if(sprints[i].name == sprintName) {
+            return sprints[i];
+        }
+    }
+
+    return false;
+}
+
 function FeatureOverview(props) {
 
     const feature = grabFeature(props.name)
 
+    const navigate = useNavigate()
+
+    const changePage = ((sprintName) => {
+
+        const sprint = grabSprint(sprintName);
+
+        navigate(SPRINT, {state: {sprint: sprint}} )
+    });
+
     const associatedSprints = feature.associated_sprints.map(sprint => 
-            <option value={sprint}>{sprint}</option>
+
+            
+
+            <option value={sprint}>
+                <Link to={SPRINT} state={{ sprint: grabSprint(sprint) }} >{sprint}</Link>
+            </option>
         );
     
 
