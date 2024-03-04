@@ -2,10 +2,11 @@
   text-align: center;
   display: flex;
   flex-direction: row;
+  font-family: "Montserrat";
 }
 
 .block {
-  background-color: grey;
+  background-color: #FFFFFF;
   width: 60rem;
   height: 10rem;
   border-radius: 32px;
@@ -18,7 +19,7 @@
 }
 
 .feature_title_block {
-  background-color: grey;
+  background-color: #FFFFFF;
   width: 60rem;
   height: 20vh;
   border-radius: 32px;
@@ -32,7 +33,7 @@
 
 
 .feature_options_block {
-  background-color: grey;
+  background-color: #FFFFFF;
   width: 60rem;
   height: 10vh;
   border-radius: 32px;
@@ -44,7 +45,7 @@
 }
 
 .feature_info_block {
-  background-color: grey;
+  background-color: #FFFFFF;
   width: 60rem;
   height: 55vh;
   border-radius: 32px;
