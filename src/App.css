@@ -50,3 +50,44 @@
   height: 55vh;
   border-radius: 32px;
 }
+
+.feature-contents {
+  float: left;
+  display: block;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-tasklist {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  height: 100px;
+}
+
+.sprint-list {
+  float: right;
+  display: inline;
+  margin-top: 30px;
+  margin-right: 50px;
+  padding: 10px;
+  font-size: medium;
+  max-width: 190px;
+  max-height: 150px;
+}
+
+.check-label {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.track-img{
+  margin: 10px;
+  height: 350px; 
+  width:400px;
+}
