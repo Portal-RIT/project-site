@@ -17,9 +17,9 @@ function FeatureDemo(props){
     const demo = feature.demo
 
     return(
-        <div>
-            <video style={{height: '50vh', width: '50vw'}}>
-                <source src={`../demo/${demo}`} />
+        <div style={{width: '100%', height: '100%'}}>
+            <video width="300em" height="300em" controls>
+                <source src={`../demo/${demo}`} type='video/mp4'/>
             </video>
         </div>
     );
