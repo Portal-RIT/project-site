@@ -170,7 +170,7 @@
 
 .home_text_block{
   background-color: white;
-  width: 60rem;
+  width: 110vh;
   border-radius: 32px;
   gap: 2rem;
   display: block;
@@ -187,7 +187,7 @@ p.home_text{
 
 .team_block{
   background-color: #FFFFFF;
-  width: 60rem;
+  width: 110vh;
   height: 23vh;
   border-radius: 32px;
   position: relative;
