@@ -120,3 +120,30 @@ p.home_text{
   padding-top: 0%;
   padding-bottom: 2%;
 }
+
+.team_block{
+  background-color: #FFFFFF;
+  width: 60rem;
+  height: 13.5em;
+  border-radius: 32px;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+h1.team_header{
+  padding-left: 2%;
+  padding-right: 5%;
+  margin: 0.25em;
+}
+
+p.team_text{
+  margin: 0;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  height: fit-content;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
