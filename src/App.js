@@ -11,6 +11,7 @@ import { BASE_LOCATION } from './routes';
 import { sprints } from './objects/sprints';
 import { features } from './objects/features';
 import "@fontsource/montserrat";
+import Documentation from './pages/Documentation';
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
           <Route path={BASE_LOCATION + "/sprints"} element={ <Sprints/> } />
           <Route path={BASE_LOCATION + "/feature/:featureName"} element={ <Feature/> }/>
           <Route path={BASE_LOCATION + "/sprint"} element={ <Sprint/> } />
+          <Route path={BASE_LOCATION + "/documents"} element={ <Documentation/> }/>
         </Routes>
 
       </BrowserRouter>
