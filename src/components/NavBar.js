@@ -10,7 +10,7 @@ import { HiUserGroup } from "react-icons/hi2";
 import { FaTasks } from "react-icons/fa";
 import { LuIterationCcw } from "react-icons/lu";
 import { Link } from 'react-router-dom';
-import { FEATURES, HOME, SPRINTS, TEAM, SPRINT, FEATURE } from '../routes';
+import { FEATURES, HOME, SPRINTS, TEAM, SPRINT, FEATURE, DOCUMENTATION } from '../routes';
 
 function NavBar ({features, sprints}) {
 	const [collapsed, setCollapsed] = useState(true);
@@ -85,6 +85,12 @@ function NavBar ({features, sprints}) {
 						})
 					}
 				</SubMenu>
+				
+				<MenuItem
+					icon={ <HiUserGroup></HiUserGroup> }
+					component={ <Link to={DOCUMENTATION} /> }
+				> Documentation </MenuItem>
+
 			</Menu>
 		</Sidebar>
 	)
