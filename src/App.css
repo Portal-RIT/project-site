@@ -2,12 +2,69 @@
   text-align: center;
   display: flex;
   flex-direction: row;
+  background-color: #F1F2F4;
   font-family: "Montserrat";
 }
 
+.main-content {
+  margin: 1rem 5rem 1rem 5rem;
+  width: 100rem;
+  height: auto;
+}
+
+.title-card {
+  background-color: white;
+  height: 15%;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.content-100w-card {
+  background-color: white;
+  height: 45%;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: inset;
+  margin-top: 1rem;
+}
+
+.content-60w-card {
+  background-color: white;
+  width: 59%;
+  height: 40%;
+  border-radius: 15px;
+  box-shadow: inset;
+  margin-top: 1rem;
+}
+
+.content-40w-card {
+  background-color: white;
+  width: 39%;
+  border-radius: 15px;
+  box-shadow: inset;
+  margin-top: 1rem;
+}
+
+.content-50w-card {
+  background-color: white;
+  width: 49%;
+  border-radius: 15px;
+  box-shadow: inset;
+  margin-top: 1rem;
+}
+
+.content-small-height {
+  height: 35%;
+}
+
+.horizontal {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
 .block {
+  width: 100%;
   background-color: #FFFFFF;
-  width: 60rem;
   height: 10rem;
   border-radius: 32px;
   position: relative;
@@ -19,8 +76,8 @@
 }
 
 .feature_title_block {
+  width: 100%;
   background-color: #FFFFFF;
-  width: 60rem;
   height: 20vh;
   border-radius: 32px;
   display: flex;
@@ -31,10 +88,14 @@
   justify-content: center;
 }
 
+.innerContent {
+  margin: 10%;
+  text-align: left;
+}
 
 .feature_options_block {
+  width: 100%;
   background-color: #FFFFFF;
-  width: 60rem;
   height: 10vh;
   border-radius: 32px;
   display: flex;
@@ -46,9 +107,12 @@
 
 .feature_info_block {
   background-color: #FFFFFF;
-  width: 60rem;
+  width: 100%;
   height: 55vh;
   border-radius: 32px;
+}
+.sprints-index {
+  overflow-y: scroll;
 }
 
 .feature-contents {

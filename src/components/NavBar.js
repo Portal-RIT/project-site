@@ -14,11 +14,14 @@ import { FEATURES, HOME, SPRINTS, TEAM, SPRINT, FEATURE, DOCUMENTATION } from '.
 
 function NavBar ({features, sprints}) {
 	const [collapsed, setCollapsed] = useState(true);
+	const [stickyOpen, setStickyOpen] = useState(false);
+
 	return (
 		<Sidebar 
-			collapsed={collapsed}
+			collapsed={stickyOpen && collapsed}
 			onMouseEnter={() => setCollapsed(false)}
 			onMouseLeave={() => setCollapsed(true)}
+			onClick={() => setStickyOpen(!stickyOpen)}
 			style={{height: "100%"}}
 			>
 			<Menu>
@@ -58,7 +61,12 @@ function NavBar ({features, sprints}) {
 				<SubMenu 
 					label="Sprints"
 					icon={<LuIterationCcw></LuIterationCcw>}
-					component={<Link to={SPRINTS} /> }
+					component={
+						<Link 
+							to={SPRINTS} 
+							state={{ sprints: sprints }} 
+						/> 
+					}
 				>
 					{
 						sprints.map( sprint => {
@@ -66,7 +74,7 @@ function NavBar ({features, sprints}) {
 								<MenuItem
 									component={
 										<Link 
-											to={SPRINT} 
+											to={ `${SPRINT}/${sprint.name}`} 
 											state={{ sprint: sprint }} 
 										/> 
 									}
