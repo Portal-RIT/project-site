@@ -1,13 +1,29 @@
 
 import { useLocation } from "react-router-dom";
+import { sprints } from '../objects/sprints';
 import '../App.css';
 import TitleCard from "../components/TitleCard";
+
+function grabSprint(sprintName) {
+    for(var i = 0; i < sprints.length; i++) {
+        if(sprints[i].name == sprintName) {
+            return sprints[i];
+        }
+    }
+
+    return false;
+}
 
 
 function Sprint() {
 
-	const location = useLocation();
-	const { sprint } = location.state;
+	// const location = useLocation();
+
+	const currentUrl = window.location.href;
+	const parts = currentUrl.split("/");
+	const partsDecoded = decodeURIComponent(parts[parts.length-1])
+	
+	const sprint = grabSprint(partsDecoded)
 
 	console.log( sprint )
 
