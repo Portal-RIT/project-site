@@ -23,7 +23,7 @@ function Sprints() {
 					sprints.map(sprint => {
 						console.log(sprint)
 						return (
-							<div className='block' onClick={() => routeToSprint(sprint)}>
+							<div className='block' style={{marginTop: '2vh'}} onClick={() => routeToSprint(sprint)}>
 								<h1>{sprint.name}</h1>
 								<p>{sprint.description}</p>
 							</div>

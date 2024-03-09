@@ -8,8 +8,9 @@
 
 .main-content {
   margin: 1rem 5rem 1rem 5rem;
-  width: 100rem;
+  width: 100%;
   height: auto;
+  overflow-y: scroll;
 }
 
 .title-card {
@@ -66,6 +67,7 @@
   width: 100%;
   background-color: #FFFFFF;
   height: 10rem;
+  overflow-y: scroll;
   border-radius: 32px;
   position: relative;
   text-align: center;
@@ -158,8 +160,7 @@
 
 .home_title_block{
   background-color: white;
-  width: 150vh;
-  height: 20vh;
+  min-height: 20vh;
   border-radius: 32px;
   gap: 2rem;
   display: block;
@@ -170,7 +171,6 @@
 
 .home_text_block{
   background-color: white;
-  width: 150vh;
   border-radius: 32px;
   gap: 2rem;
   display: block;
@@ -187,13 +187,14 @@ p.home_text{
 
 .team_block{
   background-color: #FFFFFF;
-  width: 150vh;
-  height: 23vh;
+  min-height: 23vh;
   border-radius: 32px;
   position: relative;
   text-align: center;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  margin-top: 2vh;
 }
 
 h1.team_header{

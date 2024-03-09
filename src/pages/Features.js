@@ -11,16 +11,19 @@ function Features() {
 	}
 
 	return (
-		<div style={{display: 'flex', flexDirection: 'row', width: '100%', alignItems: 'center', justifyContent: 'center'}}>
-			<div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '2rem'}}>
-				{features.map((feature) => (
-					<div className='block' onClick={() => routeChange(feature)}>
-						<h1>{feature.name}</h1>
-						<p>{feature.description}</p>
-					</div>
-				))}
+		<div className='main-content'>
+			<div style={{display: 'flex', flexDirection: 'row', width: '100%', alignItems: 'center', justifyContent: 'center'}}>
+				<div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '2rem'}}>
+					{features.map((feature) => (
+						<div className='block' onClick={() => routeChange(feature)}>
+							<h1>{feature.name}</h1>
+							<p>{feature.description}</p>
+						</div>
+					))}
+				</div>
 			</div>
 		</div>
+		
 	)
 }
 
