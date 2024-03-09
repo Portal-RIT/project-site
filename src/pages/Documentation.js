@@ -8,14 +8,14 @@ function Documentation() {
 	const location = useLocation();
 
 	return (
-		<div style={{"overflow-y":"scroll"}}>
+		<div className="main-content">
 			<h1>Domain Model</h1>
-			<img src={DOMAIN} alt="Domain Model" height="600px" width="1250px" />
+			<img src={DOMAIN} alt="Domain Model" width="100%" />
 			<h1>Software Architecture</h1>
 			
 			<a href="https://docs.google.com/document/d/1vfwsHzLObee4xKyIZKxsGICr7fXZqzZAiXjz3rplp4s/edit?usp=sharing"> Architecturally Signifigant Requirements</a>
 			<p/>
-			<img src={ARCHITECTURE} alt="Architecture Diagram" height="750px" width="1250px"/>
+			<img src={ARCHITECTURE} alt="Architecture Diagram" width="100%"/>
 		</div>
 	)
 }
