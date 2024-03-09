@@ -17,13 +17,16 @@ function grabSprint(sprintName) {
 
 function Sprint() {
 
-	// const location = useLocation();
+	const location = useLocation();
 
 	const currentUrl = window.location.href;
 	const parts = currentUrl.split("/");
 	const partsDecoded = decodeURIComponent(parts[parts.length-1])
+	const sprintToChange = grabSprint(partsDecoded)
+
+	location.state={ sprint: sprintToChange }
 	
-	const sprint = grabSprint(partsDecoded)
+	const { sprint } = location.state
 
 	console.log( sprint )
 
