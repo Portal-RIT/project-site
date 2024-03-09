@@ -31,11 +31,12 @@ function FeatureOverview(props) {
     const feature = grabFeature(props.name)
 
     const handleChange = (event) => {
-        const selectedOption = event.target.value;
+        // const selectedOption = event.target.value;
 
-        if(selectedOption) {
-            window.location.href = BASE_LOCATION + "/sprint/" + selectedOption;
-        }
+        // if(selectedOption) {
+        //     window.location.href = BASE_LOCATION + "/sprint/" + selectedOption;
+        // }
+        return;
     }
 
     const associatedSprints = feature.associated_sprints.map(sprint => 
