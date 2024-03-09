@@ -1,7 +1,7 @@
 import { sprints } from '../objects/sprints';
 import { features } from '../objects/features';
 import "../App.css"
-import { FEATURES, HOME, SPRINTS, TEAM, SPRINT, FEATURE } from '../routes';
+import { FEATURES, HOME, SPRINTS, TEAM, SPRINT, FEATURE, BASE_LOCATION } from '../routes';
 import { Link, useNavigate } from 'react-router-dom';
 import React, { useState, useHistory } from 'react';
 
@@ -13,7 +13,7 @@ function grabFeature(featureName){
         }
     }
 
-    return false;
+    return false; 
 }
 
 function grabSprint(sprintName) {
@@ -26,32 +26,22 @@ function grabSprint(sprintName) {
     return false;
 }
 
-function changePage(navigate) {
-
-    const sprintList = document.getElementById("sprint-list")
-
-    if(sprintList != null) {
-        const sprint = grabSprint(sprintList.value)
-
-        navigate(SPRINT, { state: { sprint: sprint } })
-    }
-}
-
-function addingEventListener(navigate) {
-    const sprintList = document.getElementById("sprint-list")
-    sprintList.addEventListener("onChange", () => changePage(navigate), false)
-}
-
 function FeatureOverview(props) {
 
     const feature = grabFeature(props.name)
 
-    const navigate = useNavigate()
+    const handleChange = (event) => {
+        const selectedOption = event.target.value;
+
+        if(selectedOption) {
+            window.location.href = BASE_LOCATION + "/sprint/" + selectedOption;
+        }
+    }
 
     const associatedSprints = feature.associated_sprints.map(sprint => 
 
             <option value={sprint}>
-                <Link to={SPRINT} state={{ sprint: grabSprint(sprint) }} >{sprint}</Link>
+                <Link to={`/project-site/sprint/${sprint}`} >{sprint}</Link>
             </option>
 
         );
@@ -70,7 +60,7 @@ function FeatureOverview(props) {
             <div>
                 <h1 class="feature-contents">Description</h1>
 
-                <select class="sprint-list" id="sprint-list">
+                <select class="sprint-list" id="sprint-list" onChange={handleChange}>
                     <option hidden>Associated Sprints</option>
                     {associatedSprints}
                 </select>
@@ -85,19 +75,19 @@ function FeatureOverview(props) {
             </div>
 
             <div>
-            <ul class="flex-tasklist">
-                {feature.tasks.map((task, outerIndex) =>
-                    <li class="check-label">
-                        {task.map((item, innerIndex) =>
-                            <React.Fragment>
-                                {innerIndex === 0 ? (<h3>{item}</h3>) : 
-                                    (item.startsWith("+") ? <label class="check-label"> <input checked type="checkbox"/>{item.slice(1)} </label> 
-                                    : <label class="check-label"><input type="checkbox"/>{item}</label>)}
-                            </React.Fragment>
-                        )}
-                    </li>
-                )}
-            </ul>
+                <ul class="flex-tasklist">
+                    {feature.tasks.map((task, outerIndex) =>
+                        <li class="check-label">
+                            {task.map((item, innerIndex) =>
+                                <React.Fragment>
+                                    {innerIndex === 0 ? (<h3>{item}</h3>) : 
+                                        (item.startsWith("+") ? <label class="check-label"> <input checked type="checkbox"/>{item.slice(1)} </label> 
+                                        : <label class="check-label"><input type="checkbox"/>{item}</label>)}
+                                </React.Fragment>
+                            )}
+                        </li>
+                    )}
+                </ul>
             </div>
 
         </div>
