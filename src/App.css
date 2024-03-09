@@ -187,13 +187,15 @@ p.home_text{
 
 .team_block{
   background-color: #FFFFFF;
-  width: 150vh;
   height: 23vh;
   border-radius: 32px;
   position: relative;
   text-align: center;
   display: flex;
   flex-direction: column;
+  width: 95%;
+  overflow-y: scroll;
+  margin-top: 1vh;
 }
 
 h1.team_header{
