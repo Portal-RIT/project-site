@@ -8,8 +8,9 @@
 
 .main-content {
   margin: 1rem 5rem 1rem 5rem;
-  width: 100rem;
+  width: 100%;
   height: auto;
+  overflow-y: scroll;
 }
 
 .title-card {
@@ -158,8 +159,7 @@
 
 .home_title_block{
   background-color: white;
-  width: 150vh;
-  height: 20vh;
+  min-height: 20vh;
   border-radius: 32px;
   gap: 2rem;
   display: block;
@@ -170,7 +170,6 @@
 
 .home_text_block{
   background-color: white;
-  width: 150vh;
   border-radius: 32px;
   gap: 2rem;
   display: block;
