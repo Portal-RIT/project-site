@@ -67,6 +67,7 @@
   width: 100%;
   background-color: #FFFFFF;
   height: 10rem;
+  overflow-y: scroll;
   border-radius: 32px;
   position: relative;
   text-align: center;
