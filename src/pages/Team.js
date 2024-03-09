@@ -3,9 +3,9 @@ import { teamMembers } from '../objects/teamMembers.js';
 
 function Team() {
 	return (
-		<div className='container'>
+		<div className='main-content'>
 			<div style={{display: 'flex', flexDirection: 'row', width: '100%', alignItems: 'center', justifyContent: 'center'}}>
-				<div style={{marginLeft: '5%'}}>
+				<div>
 					{teamMembers.map((teamMember) => (
 						<div className='team_block' style={{textAlign: 'left'}}>
 							<h1 className='team_header'>{teamMember.name} | {teamMember.role}</h1>
